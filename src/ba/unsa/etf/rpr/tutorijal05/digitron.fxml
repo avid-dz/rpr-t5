@@ -38,7 +38,7 @@
       <Button mnemonicParsing="false" text="1" onAction="#one" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" text="2" onAction="#two" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" text="3" onAction="#three" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <Button fx:id="equalsBtn" maxHeight="Infinity" mnemonicParsing="false" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="equalsBtn" maxHeight="Infinity" mnemonicParsing="false" text="=" onAction="#equals" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
       <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="0" onAction="#nil" GridPane.columnSpan="2" GridPane.rowIndex="5" />
       <Button mnemonicParsing="false" text="." onAction="#dot" GridPane.columnIndex="2" GridPane.rowIndex="5" />
    </children>

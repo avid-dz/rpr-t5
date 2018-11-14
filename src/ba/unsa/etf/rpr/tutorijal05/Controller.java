@@ -13,6 +13,7 @@ public class Controller {
     private String operand = "";
     private SimpleStringProperty result;
     private String operator = "";
+    private String previousResult = "";
 
     public Label display;
 
@@ -89,6 +90,11 @@ public class Controller {
     }
 
     public void plus(ActionEvent actionEvent) {
+        operator = "+";
+        previousResult = getResult();
+    }
 
+    public void equals(ActionEvent actionEvent) {
+        if (operator.e)
     }
 }
