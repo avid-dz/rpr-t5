@@ -26,21 +26,21 @@
       <Button mnemonicParsing="false" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="7" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" text="7" onAction="#seven" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" text="8" onAction="#eight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Button maxHeight="Infinity" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
-      <Label fx:id="display" text="Label" GridPane.columnSpan="4" />
-      <Button mnemonicParsing="false" text="4" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" text="1" GridPane.rowIndex="4" />
-      <Button mnemonicParsing="false" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" text="9" onAction="#nine" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button maxHeight="Infinity" mnemonicParsing="false" text="+" onAction="#plus" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+      <Label fx:id="display" text="${controller.result}" GridPane.columnSpan="4" />
+      <Button mnemonicParsing="false" text="4" onAction="#four" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" text="5" onAction="#five" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" text="6" onAction="#six" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" text="1" onAction="#one" GridPane.rowIndex="4" />
+      <Button mnemonicParsing="false" text="2" onAction="#two" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" text="3" onAction="#three" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <Button fx:id="equalsBtn" maxHeight="Infinity" mnemonicParsing="false" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
-      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="0" onAction="#nil" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" text="." onAction="#dot" GridPane.columnIndex="2" GridPane.rowIndex="5" />
    </children>
     <stylesheets>
         <URL value="@style.css" />
