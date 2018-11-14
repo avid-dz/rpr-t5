@@ -92,9 +92,12 @@ public class Controller {
     public void plus(ActionEvent actionEvent) {
         operator = "+";
         previousResult = getResult();
+        operand = "";
     }
 
     public void equals(ActionEvent actionEvent) {
-        if (operator.e)
+        if (operator.equals("+")) {
+            result.set(Double.toString(Double.parseDouble(previousResult) + Double.parseDouble(operand)));
+        }
     }
 }
