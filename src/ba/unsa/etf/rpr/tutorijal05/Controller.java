@@ -98,6 +98,49 @@ public class Controller {
     public void equals(ActionEvent actionEvent) {
         if (operator.equals("+")) {
             result.set(Double.toString(Double.parseDouble(previousResult) + Double.parseDouble(operand)));
+            previousResult = Double.toString(Double.parseDouble(previousResult) + Double.parseDouble(operand));
         }
+        else if (operator.equals("-")) {
+            result.set(Double.toString(Double.parseDouble(previousResult) - Double.parseDouble(operand)));
+            previousResult = Double.toString(Double.parseDouble(previousResult) - Double.parseDouble(operand));
+        }
+        else if (operator.equals("/")) {
+            result.set(Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand)));
+            previousResult = Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand));
+        }
+        else if (operator.equals("*")) {
+            result.set(Double.toString(Double.parseDouble(previousResult) * Double.parseDouble(operand)));
+            previousResult = Double.toString(Double.parseDouble(previousResult) * Double.parseDouble(operand));
+        }
+        else if (operator.equals("%")) {
+            result.set(Double.toString(Double.parseDouble(previousResult) % Double.parseDouble(operand)));
+            previousResult = Double.toString(Double.parseDouble(previousResult) % Double.parseDouble(operand));
+        }
+        operand = previousResult;
+        operator = "";
+    }
+
+    public void minus(ActionEvent actionEvent) {
+        operator = "-";
+        previousResult = getResult();
+        operand = "";
+    }
+
+    public void divide(ActionEvent actionEvent) {
+        operator = "/";
+        previousResult = getResult();
+        operand = "";
+    }
+
+    public void multi(ActionEvent actionEvent) {
+        operator = "*";
+        previousResult = getResult();
+        operand = "";
+    }
+
+    public void mod(ActionEvent actionEvent) {
+        operator = "%";
+        previousResult = getResult();
+        operand = "";
     }
 }

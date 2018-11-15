@@ -23,12 +23,12 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <Button fx:id="podijeljenoBtn" mnemonicParsing="false" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button fx:id="putaBtn" mnemonicParsing="false" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button fx:id="minusBtn" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="podijeljenoBtn" mnemonicParsing="false" text="/" onAction="#divide" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="putaBtn" mnemonicParsing="false" text="x" onAction="#multi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="minusBtn" mnemonicParsing="false" text="-" onAction="#minus" GridPane.columnIndex="3" GridPane.rowIndex="1" />
       <Button fx:id="btn7" mnemonicParsing="false" text="7" onAction="#seven" GridPane.rowIndex="2" />
       <Button fx:id="btn8" mnemonicParsing="false" text="8" onAction="#eight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="modBtn" mnemonicParsing="false" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="modBtn" mnemonicParsing="false" text="\%" onAction="#mod" GridPane.rowIndex="1" />
       <Button fx:id="btn9" mnemonicParsing="false" text="9" onAction="#nine" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <Button fx:id="plusBtn" maxHeight="Infinity" mnemonicParsing="false" text="+" onAction="#plus" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
       <Label fx:id="display" text="${controller.result}" GridPane.columnSpan="4" />
