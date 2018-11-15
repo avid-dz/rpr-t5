@@ -80,6 +80,9 @@ public class Controller {
             operand += "0";
             result.set(operand);
         }
+        else if (!previousResult.equals("")){
+            operand = "0";
+        }
     }
 
     public void dot(ActionEvent actionEvent) {
@@ -105,16 +108,21 @@ public class Controller {
             previousResult = Double.toString(Double.parseDouble(previousResult) - Double.parseDouble(operand));
         }
         else if (operator.equals("/")) {
-            result.set(Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand)));
-            previousResult = Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand));
+            if (operand.equals("0")) {
+                result.set("ERROR");
+            }
+            else {
+                result.set(Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand)));
+                previousResult = Double.toString(Double.parseDouble(previousResult) / Double.parseDouble(operand));
+            }
         }
         else if (operator.equals("*")) {
             result.set(Double.toString(Double.parseDouble(previousResult) * Double.parseDouble(operand)));
             previousResult = Double.toString(Double.parseDouble(previousResult) * Double.parseDouble(operand));
         }
         else if (operator.equals("%")) {
-            result.set(Double.toString(Double.parseDouble(previousResult) % Double.parseDouble(operand)));
-            previousResult = Double.toString(Double.parseDouble(previousResult) % Double.parseDouble(operand));
+            result.set(Integer.toString(Integer.parseInt(previousResult) % Integer.parseInt(operand)));
+            previousResult = Integer.toString(Integer.parseInt(previousResult) % Integer.parseInt(operand));
         }
         operand = previousResult;
         operator = "";
